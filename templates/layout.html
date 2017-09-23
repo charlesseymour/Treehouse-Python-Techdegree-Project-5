@@ -15,6 +15,7 @@
             <div class="container">
                 <div class="site-header">
                     <a class="logo" href="{{ url_for('list_entries') }}"><i class="material-icons">library_books</i></a>
+                    <!--parentheses required after is_authenticated when using workspaces-->
                     {% if current_user.is_authenticated() %}
                     <a href="{{ url_for('logout') }}" class="icon-power" title="Log out"></a>
                     {% else %}
